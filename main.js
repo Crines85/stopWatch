@@ -87,4 +87,6 @@
        timeToadd += Date.now() - startTime;
     });
 
+    //resetボタンにクリック時のイベントを追加(タイマーリセットイベント)
+
 })();
