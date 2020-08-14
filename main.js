@@ -7,6 +7,7 @@
     var timer = document.getElementById('timer');
     var start = document.getElementById('start');
     var stop = document.getElementById('stop');
+    var reset = document.getElementById('reset');
 
     //クリック時の時間を保持するための変数定義
     var startTime;
@@ -87,6 +88,18 @@
        timeToadd += Date.now() - startTime;
     });
 
-    //resetボタンにクリック時のイベントを追加(タイマーリセットイベント)
+     //resetボタンにクリック時のイベントを追加(タイマーリセットイベント)
+     reset.addEventListener('click',function(){
+
+        //経過時刻を更新するための変数elapsedTimeを0にしてあげつつ、updateTimetTextで0になったタイムを表示。
+        elapsedTime = 0;
+
+        //リセット時に0に初期化したいのでリセットを押した際に0を代入してあげる
+        timeToadd = 0;
+
+        //updateTimetTextで0になったタイムを表示
+        updateTimetText();
+
+    });
 
 })();
